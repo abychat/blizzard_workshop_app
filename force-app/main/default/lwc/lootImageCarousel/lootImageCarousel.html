@@ -1,0 +1,29 @@
+<template>
+  <template if:true={renderComponent}>
+    <div
+      class="slds-grid slds-container_small slds-container_center slds-theme_default"
+    >
+      <template for:each={carouselImages} for:item="image">
+        <div
+          key={image.id}
+          class="slds-grid slds-grid_vertical slds-theme_default slds-p-top_large"
+        >
+          <div
+            class="slds-col slds-size_12-of-12 slds-grid_align-center slds-wrap "
+          >
+            <div class="slds-text-align_center slds-m-around_x-small">
+              <img src={image.url} height="100%" width="100%" />
+            </div>
+          </div>
+          <div
+            class="slds-col slds-size_12-of-12 slds-grid_align-center slds-wrap "
+          >
+            <div class="slds-text-align_center slds-m-around_x-small">
+              <p>{image.name}</p>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+  </template>
+</template>

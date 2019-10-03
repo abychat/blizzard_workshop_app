@@ -1,0 +1,71 @@
+<template>
+ 
+    <template if:false={noData}>
+        <div class="bg" style={backgroundStyle}>
+            <div class="padding">
+              <c-loot-image-carousel></c-loot-image-carousel>
+            </div>
+      <template if:true={dataLoaded}>
+        <div class="slds-container_medium slds-container_center">
+          <div
+            class="slds-grid slds-grid_align-center"
+          >
+            <div class="slds-col slds-size_2-of-12"></div>
+            <div class="slds-col slds-size_6-of-12 slds-theme_default padding">
+              <lightning-dual-listbox
+                name="languages"
+                label="Select Loot Items"
+                source-label="Available Loot"
+                selected-label="Wish List"
+                field-level-help="Select your loot items in order of preference"
+                options={options}
+                value={selectedValues}
+                onchange={handleChange}
+              ></lightning-dual-listbox>
+            </div>
+            <div class="slds-col slds-size_2-of-12"></div>
+          </div>
+          <div
+            class="slds-grid slds-grid_align-center slds-p-top_small slds-p-bottom_small"
+          >
+            <div class="slds-col slds-size_5-of-12"></div>
+            <div class="slds-col slds-size_2-of-12">
+              <lightning-button
+                variant="brand"
+                label="Submit"
+                title="Submit"
+                onclick={handleClick}
+                disabled={isButtonDisabled}
+              ></lightning-button>
+            </div>
+            <div class="slds-col slds-size_4-of-12"></div>
+          </div>
+          <div
+            if:true={isLoading}
+            class="slds-grid slds-grid_align-center"
+          >
+            <lightning-spinner
+              variant="brand"
+              size="medium"
+              alternative-text="Zapping your loot items!"
+            >
+            </lightning-spinner>
+          </div>
+        </div>
+      </template>
+    </div>
+    </template>
+  
+    <template if:true={showNoItems}>
+      <div
+        class="slds-grid slds-grid_align-center slds-theme_default slds-p-top_large slds-p-bottom_large"
+      >
+        <div class="slds-col">
+          <p>
+            Sorry! There are no active Loot Campaigns. Please come back later!
+          </p>
+        </div>
+      </div>
+    </template>
+  
+</template>

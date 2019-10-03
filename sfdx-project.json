@@ -1,0 +1,21 @@
+{
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "LootApp",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.2.NEXT"
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "46.0",
+    "packageAliases": {
+        "LootApp": "0Ho1U000000TNKqSAO",
+        "LootApp@0.1.0-2": "04t1U000007scJ8QAI",
+        "LootApp@0.1.0-3": "04t1U000007scJcQAI",
+        "LootApp@0.1.1-1": "04t1U000007scJhQAI",
+        "LootApp@0.1.2-1": "04t1U000007scJmQAI"
+    }
+}

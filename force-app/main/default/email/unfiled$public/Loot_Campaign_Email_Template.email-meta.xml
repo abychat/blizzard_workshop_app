@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Loot Campaign Email Template</name>
+    <style>none</style>
+    <subject>Loot Campaign for {!case(month(today()),1,&#39;January&#39;,2,&#39;February&#39;,3,&#39;March&#39;,4,&#39;April&#39;,5,&#39;May&#39;,6,&#39;June&#39;,7,&#39;July&#39;,8,&#39;August&#39;,9,&#39;September&#39;,10,&#39;October&#39;,11,&#39;November&#39;,&#39;December&#39;)} is now Live!</subject>
+    <textOnly>Click HERE to opt in for Loot!
+
+
+Step 1: Follow the link, then drag &amp; drop your selections into the opt-in window.
+
+
+Step 2: Rank your selections by preference.
+
+
+Step 3: SAVE (For the love of Elune, save your changes!)
+
+
+
+Winners will be randomly selected and notified via email.
+
+
+Prizes can be picked up from the LOOT DEPOT during listed operating hours.
+
+If you have questions, please email xyz@blizzard.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
